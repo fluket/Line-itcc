@@ -17,29 +17,11 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			// $messages = array(
-			// 	'type' => 'text',
-			// 	'text' => $text
-			// );		
-			$messages = array (
-			  'type' => 'template',
-  			  'altText' => 'แจ้งปัญหา'.$text,
-  			  "template" => array (
-					    'type' => 'buttons',
-					    'thumbnailImageUrl' => 'https://goo.gl/FCTcny',
-					    'imageAspectRatio' => 'rectangle',
-					    'imageSize' => 'cover',
-					    'imageBackgroundColor' => '#FFFFFF',
-					    'title' => 'Menu',
-					    'text' => 'Please select',
-					    'actions' => [
-					      array (
-					        'type' => 'uri',
-					        'label' => 'Google',
-					        'uri' => 'http://www.google.com',
-					      ) ]
-					    )
-			 );
+			$messages = array(
+				'type' => 'text',
+				'text' => 'ลงทะเบียนสำเร็จ'
+			);		
+
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -61,5 +43,26 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 	}
+}
+else{
+		$messages = array (
+			  'type' => 'template',
+  			  'altText' => 'แจ้งปัญหา '.$text,
+  			  "template" => array (
+					    'type' => 'buttons',
+					    'thumbnailImageUrl' => 'https://goo.gl/FCTcny',
+					    'imageAspectRatio' => 'rectangle',
+					    'imageSize' => 'cover',
+					    'imageBackgroundColor' => '#FFFFFF',
+					    'title' => 'Menu',
+					    'text' => 'Please select',
+					    'actions' => [
+					      array (
+					        'type' => 'uri',
+					        'label' => 'Google',
+					        'uri' => 'http://www.google.com',
+					      ) ]
+					    )
+			 );
 }
 echo "OK";
