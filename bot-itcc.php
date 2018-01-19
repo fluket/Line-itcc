@@ -20,30 +20,13 @@ if (!is_null($events['events'])) {
 			// $messages = array(
 			// 	'type' => 'text',
 			// 	'text' => $text
-			// );
-			// $messages = [
-			// 	'type' => 'template',
-			// 	'altText' => 'This is a buttons template',
-			// 	'template' = ['type' => 'buttons',
-			// 			      'thumbnailImageUrl' => 'https://assets.yellow.co.nz/file/v1-mVxrL4_aBGY-uLSK6T6ePW2IpKQS8MAEm7p5K7NqEHU314_NqZesXTHTQ0scAVz7MuprO_UF6IWFp2xyRgqRf0EvPMdlqgNeaV3lXTEh5KJTq9dZyimeFI2LoaPNv7lnMCFCv5vA0ytX49rUwluvIA/112522133%20PC%20Problems%20(Photo%209).jpg',
-			// 			      'imageAspectRatio' => 'rectangle',
-			// 			      'imageSize' => 'cover',
-			// 			      'imageBackgroundColor' => '#FFFFFF',
-			// 			      'title' => 'Menu',
-			// 			      'text' => $text,	
-			// 			      "actions"  => [
-			// 					            "type" => "uri",
-			// 					            "label" => "Google",
-			// 					            "uri" => "http://www.google.com"
-			// 					           ]
-   //    						]							
-			// ];			
+			// );		
 			$messages = array (
 			  'type' => 'template',
   			  'altText' => 'This is a buttons template',
   			  "template" => array (
 					    'type' => 'buttons',
-					    'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
+					    'thumbnailImageUrl' => 'https://assets.yellow.co.nz/file/v1-mVxrL4_aBGY-uLSK6T6ePW2IpKQS8MAEm7p5K7NqEHU314_NqZesXTHTQ0scAVz7MuprO_UF6IWFp2xyRgqRf0EvPMdlqgNeaV3lXTEh5KJTq9dZyimeFI2LoaPNv7lnMCFCv5vA0ytX49rUwluvIA/112522133%20PC%20Problems%20(Photo%209).jpg',
 					    'imageAspectRatio' => 'rectangle',
 					    'imageSize' => 'cover',
 					    'imageBackgroundColor' => '#FFFFFF',
@@ -52,8 +35,8 @@ if (!is_null($events['events'])) {
 					    'actions' => [
 					      array (
 					        'type' => 'uri',
-					        'label' => 'View detail',
-					        'uri' => 'http://example.com/page/123',
+					        'label' => 'Google',
+					        'uri' => 'http://www.google.com"',
 					      ) ]
 					    )
 			 );
