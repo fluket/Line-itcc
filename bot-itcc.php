@@ -17,10 +17,10 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = array (
+			$messages = [
 				'type' => 'text',
 				'text' => $text
-			);
+			];
 			// $messages = [
 			// 	'type' => 'template',
 			// 	'altText' => 'This is a buttons template',
