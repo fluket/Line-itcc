@@ -49,12 +49,12 @@ if (!is_null($events['events'])) {
 					    'imageBackgroundColor' => '#FFFFFF',
 					    'title' => 'Menu',
 					    'text' => 'Please select',
-					    'actions' => 
+					    'actions' => [
 					      array (
 					        'type' => 'uri',
 					        'label' => 'View detail',
 					        'uri' => 'http://example.com/page/123',
-					      )
+					      ) ]
 					    )
 			 );
 			// Make a POST Request to Messaging API to reply to sender
