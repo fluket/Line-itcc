@@ -17,27 +17,27 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			// $messages = [
-			// 	'type' => 'text',
-			// 	'text' => $text
-			// ];
 			$messages = [
-				'type' => 'template',
-				'altText' => 'This is a buttons template',
-				'template' =>['type' => 'buttons',
-						      'thumbnailImageUrl' => 'https://assets.yellow.co.nz/file/v1-mVxrL4_aBGY-uLSK6T6ePW2IpKQS8MAEm7p5K7NqEHU314_NqZesXTHTQ0scAVz7MuprO_UF6IWFp2xyRgqRf0EvPMdlqgNeaV3lXTEh5KJTq9dZyimeFI2LoaPNv7lnMCFCv5vA0ytX49rUwluvIA/112522133%20PC%20Problems%20(Photo%209).jpg',
-						      'imageAspectRatio' => 'rectangle',
-						      'imageSize' => 'cover',
-						      'imageBackgroundColor' => '#FFFFFF',
-						      'title' => 'Menu',
-						      'text' => $text,	
-						      "actions"  => [
-								            "type" => "uri",
-								            "label" => "Google",
-								            "uri" => "http://www.google.com"
-								           ]
-      						]							
-			];			
+				'type' => 'text',
+				'text' => $text
+			];
+			// $messages = [
+			// 	'type' => 'template',
+			// 	'altText' => 'This is a buttons template',
+			// 	'template' =>['type' => 'buttons',
+			// 			      'thumbnailImageUrl' => 'https://assets.yellow.co.nz/file/v1-mVxrL4_aBGY-uLSK6T6ePW2IpKQS8MAEm7p5K7NqEHU314_NqZesXTHTQ0scAVz7MuprO_UF6IWFp2xyRgqRf0EvPMdlqgNeaV3lXTEh5KJTq9dZyimeFI2LoaPNv7lnMCFCv5vA0ytX49rUwluvIA/112522133%20PC%20Problems%20(Photo%209).jpg',
+			// 			      'imageAspectRatio' => 'rectangle',
+			// 			      'imageSize' => 'cover',
+			// 			      'imageBackgroundColor' => '#FFFFFF',
+			// 			      'title' => 'Menu',
+			// 			      'text' => $text,	
+			// 			      "actions"  => [
+			// 					            "type" => "uri",
+			// 					            "label" => "Google",
+			// 					            "uri" => "http://www.google.com"
+			// 					           ]
+   //    						]							
+			// ];			
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
