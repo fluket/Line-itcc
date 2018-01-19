@@ -48,20 +48,6 @@ if (!is_null($events['events'])) {
 			    'title' => 'Menu',
 			    'text' => 'Please select',
 			    'actions' => 
-			    array (
-			      0 => 
-			      array (
-			        'type' => 'postback',
-			        'label' => 'Buy',
-			        'data' => 'action=buy&itemid=123',
-			      ),
-			      1 => 
-			      array (
-			        'type' => 'postback',
-			        'label' => 'Add to cart',
-			        'data' => 'action=add&itemid=123',
-			      ),
-			      2 => 
 			      array (
 			        'type' => 'uri',
 			        'label' => 'View detail',
