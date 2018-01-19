@@ -22,7 +22,6 @@ if (!is_null($events['events'])) {
 			// 	'text' => $text
 			// ];
 			$messages = [
-<<<<<<< HEAD
 				'type' => 'template',
 				'altText' => 'This is a buttons template',
 				'template' =>['type' => 'buttons',
@@ -39,11 +38,6 @@ if (!is_null($events['events'])) {
 								           ]
       						]							
 			];			
-=======
-				'type' => 'button',
-				'text' => $text
-			];
->>>>>>> c87d85b8dc36feb8d6fc26e437211b8dc1336124
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
