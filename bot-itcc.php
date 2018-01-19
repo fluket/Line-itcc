@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
   			  'altText' => 'This is a buttons template',
   			  "template" => array (
 					    'type' => 'buttons',
-					    'thumbnailImageUrl' => 'https://assets.yellow.co.nz/file/v1-mVxrL4_aBGY-uLSK6T6ePW2IpKQS8MAEm7p5K7NqEHU314_NqZesXTHTQ0scAVz7MuprO_UF6IWFp2xyRgqRf0EvPMdlqgNeaV3lXTEh5KJTq9dZyimeFI2LoaPNv7lnMCFCv5vA0ytX49rUwluvIA/112522133%20PC%20Problems%20(Photo%209).jpg',
+					    'thumbnailImageUrl' => 'https://goo.gl/FCTcny',
 					    'imageAspectRatio' => 'rectangle',
 					    'imageSize' => 'cover',
 					    'imageBackgroundColor' => '#FFFFFF',
