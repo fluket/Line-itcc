@@ -19,7 +19,7 @@ if (isset($events['events'])){
 			// Build message to reply back
 			$messages = array(
 				'type' => 'text',
-				'text' => 'ลงทะเบียนสำเร็จ '.$event['replyToken']
+				'text' => 'ลงทะเบียนสำเร็จ '.$event['source']['userId']
 			);		
 
 			// Make a POST Request to Messaging API to reply to sender
