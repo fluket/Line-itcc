@@ -38,22 +38,25 @@ if (!is_null($events['events'])) {
 			// 					           ]
    //    						]							
 			// ];			
-			$messages = 
-			  array (
-			    'type' => 'buttons',
-			    'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
-			    'imageAspectRatio' => 'rectangle',
-			    'imageSize' => 'cover',
-			    'imageBackgroundColor' => '#FFFFFF',
-			    'title' => 'Menu',
-			    'text' => 'Please select',
-			    'actions' => 
-			      array (
-			        'type' => 'uri',
-			        'label' => 'View detail',
-			        'uri' => 'http://example.com/page/123',
-			      )
-			    );
+			$messages = array (
+			  'type' => 'template',
+  			  'altText' => 'This is a buttons template',
+  			  "template" => array (
+					    'type' => 'buttons',
+					    'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
+					    'imageAspectRatio' => 'rectangle',
+					    'imageSize' => 'cover',
+					    'imageBackgroundColor' => '#FFFFFF',
+					    'title' => 'Menu',
+					    'text' => 'Please select',
+					    'actions' => 
+					      array (
+					        'type' => 'uri',
+					        'label' => 'View detail',
+					        'uri' => 'http://example.com/page/123',
+					      )
+					    )
+			 );
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
