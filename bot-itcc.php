@@ -17,10 +17,10 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = array(
-				'type' => 'text',
-				'text' => $text
-			);
+			// $messages = array(
+			// 	'type' => 'text',
+			// 	'text' => $text
+			// );
 			// $messages = [
 			// 	'type' => 'template',
 			// 	'altText' => 'This is a buttons template',
@@ -38,37 +38,37 @@ if (!is_null($events['events'])) {
 			// 					           ]
    //    						]							
 			// ];			
-			// $messages = 
-			//   array (
-			//     'type' => 'buttons',
-			//     'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
-			//     'imageAspectRatio' => 'rectangle',
-			//     'imageSize' => 'cover',
-			//     'imageBackgroundColor' => '#FFFFFF',
-			//     'title' => 'Menu',
-			//     'text' => 'Please select',
-			//     'actions' => 
-			//     array (
-			//       0 => 
-			//       array (
-			//         'type' => 'postback',
-			//         'label' => 'Buy',
-			//         'data' => 'action=buy&itemid=123',
-			//       ),
-			//       1 => 
-			//       array (
-			//         'type' => 'postback',
-			//         'label' => 'Add to cart',
-			//         'data' => 'action=add&itemid=123',
-			//       ),
-			//       2 => 
-			//       array (
-			//         'type' => 'uri',
-			//         'label' => 'View detail',
-			//         'uri' => 'http://example.com/page/123',
-			//       )
-			//     )
-			//   )
+			$messages = 
+			  array (
+			    'type' => 'buttons',
+			    'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
+			    'imageAspectRatio' => 'rectangle',
+			    'imageSize' => 'cover',
+			    'imageBackgroundColor' => '#FFFFFF',
+			    'title' => 'Menu',
+			    'text' => 'Please select',
+			    'actions' => 
+			    array (
+			      0 => 
+			      array (
+			        'type' => 'postback',
+			        'label' => 'Buy',
+			        'data' => 'action=buy&itemid=123',
+			      ),
+			      1 => 
+			      array (
+			        'type' => 'postback',
+			        'label' => 'Add to cart',
+			        'data' => 'action=add&itemid=123',
+			      ),
+			      2 => 
+			      array (
+			        'type' => 'uri',
+			        'label' => 'View detail',
+			        'uri' => 'http://example.com/page/123',
+			      )
+			    )
+			  )
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
