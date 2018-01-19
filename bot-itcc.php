@@ -17,14 +17,14 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => $text
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $text
+			// ];
 			// $messages = [
 			// 	'type' => 'template',
 			// 	'altText' => 'This is a buttons template',
-			// 	'template' =>['type' => 'buttons',
+			// 	'template' = ['type' => 'buttons',
 			// 			      'thumbnailImageUrl' => 'https://assets.yellow.co.nz/file/v1-mVxrL4_aBGY-uLSK6T6ePW2IpKQS8MAEm7p5K7NqEHU314_NqZesXTHTQ0scAVz7MuprO_UF6IWFp2xyRgqRf0EvPMdlqgNeaV3lXTEh5KJTq9dZyimeFI2LoaPNv7lnMCFCv5vA0ytX49rUwluvIA/112522133%20PC%20Problems%20(Photo%209).jpg',
 			// 			      'imageAspectRatio' => 'rectangle',
 			// 			      'imageSize' => 'cover',
@@ -38,7 +38,41 @@ if (!is_null($events['events'])) {
 			// 					           ]
    //    						]							
 			// ];			
-
+			$messages = array (
+			  'type' => 'template',
+			  'altText' => 'This is a buttons template',
+			  'template' => 
+			  array (
+			    'type' => 'buttons',
+			    'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
+			    'imageAspectRatio' => 'rectangle',
+			    'imageSize' => 'cover',
+			    'imageBackgroundColor' => '#FFFFFF',
+			    'title' => 'Menu',
+			    'text' => 'Please select',
+			    'actions' => 
+			    array (
+			      0 => 
+			      array (
+			        'type' => 'postback',
+			        'label' => 'Buy',
+			        'data' => 'action=buy&itemid=123',
+			      ),
+			      1 => 
+			      array (
+			        'type' => 'postback',
+			        'label' => 'Add to cart',
+			        'data' => 'action=add&itemid=123',
+			      ),
+			      2 => 
+			      array (
+			        'type' => 'uri',
+			        'label' => 'View detail',
+			        'uri' => 'http://example.com/page/123',
+			      ),
+			    ),
+			  ),
+			)
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
