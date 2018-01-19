@@ -36,7 +36,7 @@ if (!is_null($events['events'])) {
 					      array (
 					        'type' => 'uri',
 					        'label' => 'Google',
-					        'uri' => 'http://www.google.com"',
+					        'uri' => 'http://www.google.com',
 					      ) ]
 					    )
 			 );
