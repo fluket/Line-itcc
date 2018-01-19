@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			// );		
 			$messages = array (
 			  'type' => 'template',
-  			  'altText' => 'This is a buttons template',
+  			  'altText' => 'แจ้งปัญหา'.$text,
   			  "template" => array (
 					    'type' => 'buttons',
 					    'thumbnailImageUrl' => 'https://goo.gl/FCTcny',
