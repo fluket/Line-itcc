@@ -13,25 +13,24 @@ if (isset($events['events'])){
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
+
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
+			if(substr($text,0,7) == '@regis '){
 			// Build message to reply back
+				$response = 'ลงทะเบียนสำเร็จ';
+			}else{
+				$response = 'ระบุไม่ถูกต้อง';
+			}
 			$messages = array(
-				'type' => 'text',
-				'text' => 'ลงทะเบียนสำเร็จ '.$event['source']['userId']
-			);		
-
+					'type' => 'text',
+					'text' => $response
+			);	
 			// Make a POST Request to Messaging API to reply to sender
-			// $url = 'https://api.line.me/v2/bot/message/reply';
-			// $data = [
-			// 	'replyToken' => $replyToken,
-			// 	'messages' => array($messages),
-			// ];
-
-			$url = 'https://api.line.me/v2/bot/message/push';
+			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
-				'to' => $replyToken,
+				'replyToken' => $replyToken,
 				'messages' => array($messages),
 			];
 
@@ -51,7 +50,8 @@ if (isset($events['events'])){
 		}
 	}
 }
-else{
+elseif(isset($events['rid'])){
+
 		$messages = array (
 			  'type' => 'template',
   			  'altText' => 'แจ้งปัญหา '.$text,
@@ -71,5 +71,25 @@ else{
 					      ) ]
 					    )
 			 );
+
+			$url = 'https://api.line.me/v2/bot/message/push';
+			$data = [
+				'to' => 'U941733818ea3dec842a5a7126c787382',
+				'messages' => array($messages),
+			];
+
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
+
+			echo $result . "\r\n";
 }
 echo "OK";
