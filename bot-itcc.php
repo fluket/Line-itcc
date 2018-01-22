@@ -57,7 +57,7 @@ if (isset($events['events'])){
 }
 elseif(isset($events['rid'])){
        	$title = $events['title'];
-		$messages = array (
+		$messages = array ( 
 			  'type' => 'template',
 				  'altText' => 'แจ้งปัญหา '.$title,
 				  "template" => array (
